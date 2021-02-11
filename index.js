@@ -9,6 +9,7 @@ const label = require('./components/label.jsx');
 
 export default class HoofersFirstPlugin extends Plugin {
 start () {
+    this.injectStyles('style.scss');
     const MaskedLink = getModuleByDisplayName("MaskedLink", false)
     patch('title-inject', MaskedLink.prototype, "render", (args, res) => {
         if (typeof(res.props.children) === "string"){
