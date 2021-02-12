@@ -79,9 +79,7 @@ export default class LinksFlagger extends Plugin {
             
             var filter = this.filterUrl(res.props.href)
             if (filter){
-                if (this.getToolTipFromName("Safe URL").urlClass !== filter) {
-                    customClass += " flagged-link"
-                }
+                customClass += " flagged-link"
                 res.props.children = React.createElement(label, {classType:customClass,field:res.props.children,data:filter});
             }
             
