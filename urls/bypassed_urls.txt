@@ -1,0 +1,8 @@
+discord.com
+discordapp.com
+cdn.discord.com
+cdn.discordapp.com
+canary.discord.com
+canary.discord.com
+ptb.discord.com
+ptb.discordapp.com
