@@ -15,7 +15,6 @@ module.exports = class LinksFlaggerModal extends React.PureComponent {
         // lol is this the right way? idk. idc.
         function count(){
             setTimeout(function(){
-                console.log(self.countDown);
                 if (self.countDown > 0){
                     self.countDown = self.countDown - 1;
                     self.forceUpdate();

@@ -66,7 +66,6 @@ export default class LinksFlagger extends Plugin {
             
             // probably bad way of doing it, don't care though
             tooltipTypes.forEach(tooltipInfo=>{
-                console.log(res.props.targetElementRef.current.classList)
                 if (res.props.targetElementRef.current.classList.contains(tooltipInfo.urlClass)){
                     res.props.tooltipClassName = tooltipInfo.tooltipClass
                     res.props.children = tooltipInfo.field_display;
@@ -89,8 +88,6 @@ export default class LinksFlagger extends Plugin {
             var filter = this.filterUrl(res.props.href)
             if (filter){
                 customClass += " flagged-link"
-                console.log(filter)
-                console.log(this.getToolTipFromName("Safe URL").urlClass)
                 if (filter != this.getToolTipFromName("Safe URL").urlClass){
                     var url = res.props.href;
                     res.props.href = null;
