@@ -45,9 +45,11 @@ export default class LinksFlagger extends Plugin {
             .then(res=> this.assortUrls(res.body.toString(),dangerousUrls))
         get("https://raw.githubusercontent.com/hoofer-vizality/links-flagger/main/urls/bypassed_urls.txt")
             .then(res=> this.assortUrls(res.body.toString(),bypassedUrls))    
+
         // modules
         const MaskedLink = getModuleByDisplayName("MaskedLink", false)
         const Tooltip = getModuleByDisplayName('Tooltip', false)  
+
         // injectors
         patch('tooltip-inject', Tooltip.prototype, "renderTooltip", (args, res) => {
             if (!res.props || !res.props.children || !res.props.targetElementRef || !res.props.targetElementRef.current)
@@ -70,15 +72,18 @@ export default class LinksFlagger extends Plugin {
             if (typeof(res.props.children) === "object")
                 res.props.children = res.props.children[0];
             
-            var customClass = "flagged-link"; 
+            var customClass = ""; 
+            
             if (res.props.className && res.props.className.includes("embedTitleLink"))
-                customClass += " link-title-container"; 
+                customClass += "link-title-container"; 
+            
             var filter = this.filterUrl(res.props.href)
-
             if (filter){
+                if (this.getToolTipFromName("Safe URL").urlClass !== filter) {
+                    customClass += " flagged-link"
+                }
                 res.props.children = React.createElement(label, {classType:customClass,field:res.props.children,data:filter});
             }
-            
             
             return res;
         });   
@@ -89,6 +94,8 @@ export default class LinksFlagger extends Plugin {
         unpatch('link-inject')
     }
 
+    // sorts the urls from http requests
+
     assortUrls(stringList, arrayLocation){
         stringList.split("\n").forEach(url=>{
             if (url !== ""){
@@ -97,23 +104,34 @@ export default class LinksFlagger extends Plugin {
         })
     }
 
+    // filters inputted url and returns class type of url
+
     filterUrl(inputUrl){
-        var res = false;
-        console.log(inputUrl);
+        inputUrl = inputUrl.toLowerCase();
+        var res = this.getToolTipFromName("Safe URL").urlClass;
         unsafeUrls.forEach(url=>{
-            if (inputUrl.includes(url)){
+            url = url.split(/\s+/).join('');
+            if (url !== "" && inputUrl.includes(url.toLowerCase())){
                 res = this.getToolTipFromName("Unsafe URL").urlClass;
             }
         })
         dangerousUrls.forEach(url=>{
-            if (inputUrl.includes   (url)){
+            url = url.split(/\s+/).join('');
+            if (url !== "" && inputUrl.includes(url.toLowerCase())){
                 res = this.getToolTipFromName("Dangerous URL").urlClass;
             }
         })
-
+        bypassedUrls.forEach(url=>{
+            url = url.split(/\s+/).join('');
+            if (url !== "" && inputUrl.includes(url.toLowerCase())){
+                res = false
+            }
+        })
 
         return res;
     }
+
+    // converts tooltip name into tooltip object
 
     getToolTipFromName(name){   
         var res = null;
