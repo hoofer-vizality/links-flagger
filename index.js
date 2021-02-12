@@ -12,10 +12,14 @@ start () {
     this.injectStyles('style.scss');
     const MaskedLink = getModuleByDisplayName("MaskedLink", false)
     patch('title-inject', MaskedLink.prototype, "render", (args, res) => {
-        if (typeof(res.props.children) === "string"){
-            res.props.children = [res.props.children]
-        }
-        res.props.children.push(React.createElement(label, {})); 
+        if (!res.props || !res.props.children)
+            return res;
+        if (typeof(res.props.children) === "object")
+            res.props.children = res.props.children[0];
+
+        if (!res.props.href.startsWith("https://discord"))
+            res.props.children = React.createElement(label, {field:res.props.children,hoverText:res.props.children});
+        
         return res;
     });
   }

@@ -1,7 +1,13 @@
 import React from 'react';
+import { FormItem, FormText, Tooltip, Button, Divider } from '@vizality/components/';
 
-module.exports = ({}) => (
+module.exports = ({field,hoverText}) => (
+   <Tooltip
+   text={hoverText}
+   className='vz-settings-button-item-button-wrapper'
+   >
     <div class="suspicious-url">
-    <p class="suspicious-url-inner-text">Placeholder Text</p>
+        {field}
     </div>
+   </Tooltip>
 );
