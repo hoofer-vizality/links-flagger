@@ -17,7 +17,7 @@ git clone https://github.com/hoofer-vizality/links-flagger
 
 
 # Issues / Concerns
-Have an issue? Please make a request using our format which can be found [here]([here](https://github.com/hoofer-vizality/links-flagger/issues/new?template=ISSUE_TEMPLATE.md)), thanks!
+Have an issue? Please make a request using our format which can be found [here](https://github.com/hoofer-vizality/links-flagger/issues/new?template=ISSUE_TEMPLATE.md), thanks!
 
 
 # Submitting URLs
