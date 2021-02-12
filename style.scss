@@ -78,8 +78,11 @@
 
 #app-mount [class*="url-tooltip-content"] {
     background-color: var(--tooltip);
+    border: dashed 1px #fff;
+    box-shadow: 0 2px 5px #000000;
 
     .tooltipPointer-3ZfirK {
+        border-top: dashed 1px #fff;
         border-top-color: var(--tooltip);
     }
 }
