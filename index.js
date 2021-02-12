@@ -42,6 +42,7 @@ export default class LinksFlagger extends Plugin {
     start () {
         // theming
         this.injectStyles('style.scss');  
+        
         // preload all the urls
 
         get("https://raw.githubusercontent.com/hoofer-vizality/links-flagger/main/urls/unsafe_urls.txt")
