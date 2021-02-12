@@ -1,9 +1,8 @@
 import React from 'react';
 
 import { Plugin } from '@vizality/entities';
-import { findInReactTree } from '@vizality/util/react';
 import { patch, unpatch } from '@vizality/patcher';
-import { getModule, getModuleByDisplayName, getModules } from '@vizality/webpack';
+import { getModuleByDisplayName } from '@vizality/webpack';
 import { get } from '@vizality/http';
 
 const label = require('./components/label.jsx');

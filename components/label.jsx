@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormItem, FormText, Tooltip, Button, Divider } from '@vizality/components/';
+import { Tooltip } from '@vizality/components/';
 
 module.exports = ({field,classType,data}) => (
    <Tooltip
