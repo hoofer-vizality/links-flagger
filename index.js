@@ -11,6 +11,21 @@ export default class HoofersFirstPlugin extends Plugin {
 start () {
     this.injectStyles('style.scss');
     const MaskedLink = getModuleByDisplayName("MaskedLink", false)
+    const Tooltip = getModuleByDisplayName('Tooltip', false)
+    const h = getModule(m => m.default?.displayName === 'Tooltip', false);
+    console.log(h);
+    console.log(Tooltip.prototype);
+    patch('tooltip-inject', Tooltip.prototype, "renderTooltip", (args, res) => {
+        if (!res.props || !res.props.children || !res.props.targetElementRef || !res.props.targetElementRef.current)
+            return;
+        
+        if (res.props.targetElementRef.current.classList.contains("suspicious-url-tooltip")){
+            res.props.tooltipClassName = "suspicious-url-tooltip-content"
+        }
+        
+        
+        return res;
+    });
     patch('title-inject', MaskedLink.prototype, "render", (args, res) => {
         if (!res.props || !res.props.children)
             return res;
@@ -26,5 +41,6 @@ start () {
 
   stop () {
      unpatch('title-inject')
+     unpatch('tooltip-inject')
   }
 }

@@ -3,11 +3,12 @@ import { FormItem, FormText, Tooltip, Button, Divider } from '@vizality/componen
 
 module.exports = ({field,hoverText}) => (
    <Tooltip
-   text={hoverText}
-   className='vz-settings-button-item-button-wrapper suspicious-url-tooltip'
-   >
+   text="This URL is potentially malicious. Proceed with caution."
+   color="red"
+   className='vz-settings-button-item-button-wrapper suspicious-url-tooltip'>
     <div class="suspicious-url">
         {field}
     </div>
    </Tooltip>
 );
+
