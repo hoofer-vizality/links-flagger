@@ -4,7 +4,7 @@ import { FormItem, FormText, Tooltip, Button, Divider } from '@vizality/componen
 module.exports = ({field,hoverText}) => (
    <Tooltip
    text={hoverText}
-   className='vz-settings-button-item-button-wrapper'
+   className='vz-settings-button-item-button-wrapper suspicious-url-tooltip'
    >
     <div class="suspicious-url">
         {field}
