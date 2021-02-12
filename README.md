@@ -1,4 +1,4 @@
-![Banner](./assets/banner.png)
+![Banner](https://github.com/hoofer-vizality/links-flagger/blob/main/assets/banner.png?raw=true)
 <p align="center">
   <a href="#"><img align="center" alt="GitHub repo size" src="https://img.shields.io/github/repo-size/hoofer-vizality/links-flagger?color=38A3D0&style=for-the-badge&logo=github">
   <a href="#"><img align ="center" alt="Version" src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=38A3D0&style=for-the-badge&logo=data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHpFAACAgwAA/FcAAIDoAAB5FgAA8QEAADtfAAAcheDStWoAAAGwSURBVHja7JcxSBxBFIa/Pa%2BQECuFFClNsLWRgGJSpEgn1oJosDIcFpbWKcTC47TKHbEVzpRRsLVOtEkKG2MTxO7QECUH%2BW3mcG7ZvX1j9nLNPVjY2Xn7f/Nm5g1vIkkYbBTYB0aAtB8ioAHMAt%2ByBIvY7AUwZvAbBl5ZwAUj%2BDd2%2B2VxsoIVAFae4NytD%2B6Dew6%2BCNC8tDgVEwYyAQx4%2BSjgZQB4yh2dBe8o/Qt8BZr32S75zyd1zw59Vnyqz7u4rD/az7f2iJG02YVoq3FOEhhJ5RyhtSRGGjivyKtp%2Bp3A/xp5rZN2FhhJlQdAP2bpWsCh016zaFrBVnjVqhe5Yu8ZMAc8ilUQEXAM1F27Aqyk5OkOsOTeZ4DJBK1bYA/4jqSnkm4yIillRO5HumiYmedI%2BmBcuzS4D10watWRdBawcZY9yLobQKs97/ldS/osqeHaB5JOvf6fOKcQKyVslvj0rrnvG5Iu3PsTr/%2Bq6Bb8ccBhvw2Muw0nd3N4F/N5DXxxF4Eh4I3bbC1rRpKOgOn/XICcFIByDyqfrVYevwfeAoOBt4YQi4A/wC6wejcAIWlEHq3bJrMAAAAASUVORK5CYII%3D">
@@ -14,3 +14,12 @@ For installation, go to **Plugins -> Open a CMD / Powershell / Terminal / Gitbas
 ```
 git clone https://github.com/hoofer-vizality/links-flagger
 ```
+
+
+# Submitting URLs
+If you have any URLs you would like to submit, please use our issue template [here](https://github.com/hoofer-vizality/links-flagger/issues/new?template=LINK_SUBMISSION). We have the right to decline any URLs, as some of them might be false or in the wrong categories.
+
+
+# Credits
+JS Coding done by the wizard person, [@Hoofer](https://github.com/HooferDevelops)!
+CSS & Artwork done by the amazing (not a weeb) [@LuckFire](https://github.com/LuckFire) :o
