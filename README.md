@@ -17,14 +17,14 @@ git clone https://github.com/hoofer-vizality/links-flagger
 
 
 # Issues / Concerns
-Have an issue? Please make a request using our format which can be found [here](https://github.com/hoofer-vizality/links-flagger/issues/new?template=ISSUE_TEMPLATE.md), thanks!
+Have an issue? Please make a request using our issue format which can be found [here](https://github.com/hoofer-vizality/links-flagger/issues/new?template=ISSUE_TEMPLATE.md), thanks!
 
 
 # Submitting URLs
-If you have any URLs you would like to submit, please use our issue template [here](https://github.com/hoofer-vizality/links-flagger/issues/new?template=LINK_SUBMISSION.md). We have the right to decline any URLs, as some of them might be false or in the wrong categories.
+If you have any URLs you would like to submit, please use our link submission template [here](https://github.com/hoofer-vizality/links-flagger/issues/new?template=LINK_SUBMISSION.md). We have the right to decline any URLs, as some of them might be false or in the wrong categories.
 
 
 # Credits
 JS Coding done by the wizard person, [@Hoofer](https://github.com/HooferDevelops)!
 
-CSS & Artwork done by the amazing (not a weeb) [@LuckFire](https://github.com/LuckFire) :o
+CSS & Artwork done by the amazing (not a weeb), [@LuckFire](https://github.com/LuckFire) :o
