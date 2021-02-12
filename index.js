@@ -19,7 +19,7 @@ start () {
         if (!res.props || !res.props.children || !res.props.targetElementRef || !res.props.targetElementRef.current)
             return;
         
-        if (res.props.targetElementRef.current.classList.contains("suspicious-url-tooltip")){
+        if (res.props.targetElementRef.current.classList.contains("suspicious-url-link")){
             res.props.tooltipClassName = "suspicious-url-tooltip-content"
         }
         
