@@ -26,6 +26,12 @@ const tooltipTypes = [
         field_display: "This URL was flagged as dangerous, proceed at your own risk.",
         urlClass: "dangerous-url-link",
         tooltipClass: "dangerous-url-tooltip-content"
+    },
+    {
+        name: "Http URL",
+        field_display: "This URL is an http url. These URL's are usually insecure, take caution.",
+        urlClass: "http-url-link",
+        tooltipClass: "http-url-tooltip-content"
     }
 ]
 
@@ -125,6 +131,10 @@ export default class LinksFlagger extends Plugin {
                 res = false
             }
         })
+
+        if (inputUrl.startsWith("http://")){
+            res = this.getToolTipFromName("Http URL").urlClass;
+        }
 
         return res;
     }

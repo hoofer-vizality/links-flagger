@@ -1,6 +1,7 @@
 .safe-url-link, 
 .unsafe-url-link, 
 .dangerous-url-link, 
+.http-url-link,
 .modified-url {
     display: inline;
 }
@@ -51,6 +52,18 @@
     }
 }
 
+.http-url-link {
+    --link-color: #FAA61A;
+
+    .link-title-container::after {
+        --background: #FAA61A;
+        --inner-text: #fff;
+        --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>');
+        --notice: "Unsafe";
+        --border: dashed 1px #fff;
+    }
+}
+
 .dangerous-url-link {
     --link-color: #F04747;
 
@@ -75,6 +88,9 @@
     --tooltip: #43B581;
 }
 .unsafe-url-tooltip-content {
+    --tooltip: #FAA61A;
+}
+.http-url-tooltip-content {
     --tooltip: #FAA61A;
 }
 .dangerous-url-tooltip-content {
