@@ -1,3 +1,4 @@
+example-dangerous-url.vizality
 orcahub.com
 vbooter.org
 orboot.pw
