@@ -8,6 +8,8 @@
 # Links Flagger
 Become aware of those "sus" links with ease.
 
+![Preview](https://github.com/hoofer-vizality/links-flagger/blob/main/assets/example.gif?raw=true)
+
 
 # Installation
 For installation, go to **Plugins -> Open a CMD / Powershell / Terminal / Gitbash** in the folder, and enter the following:
