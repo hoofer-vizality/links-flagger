@@ -6,7 +6,7 @@ module.exports = ({field,classType,data}) => (
    text="Loading..."
    color="red"
    className={`vz-settings-button-item-button-wrapper ${data}`}>
-    <div class={`suspicious-url ${classType}`}>
+    <div class={`modified-url ${classType}`}>
         {field}
     </div>
    </Tooltip>
