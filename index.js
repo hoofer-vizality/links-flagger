@@ -4,8 +4,10 @@ import { Plugin } from '@vizality/entities';
 import { patch, unpatch } from '@vizality/patcher';
 import { getModuleByDisplayName } from '@vizality/webpack';
 import { get } from '@vizality/http';
+import { open as openModal } from '@vizality/modal';
 
-const label = require('./components/label.jsx');
+import label from "./components/label.jsx";
+import LinksFlaggerModal from "./components/testModal.jsx";
 
 const tooltipTypes = [
     {
@@ -55,6 +57,7 @@ export default class LinksFlagger extends Plugin {
         // modules
         const MaskedLink = getModuleByDisplayName("MaskedLink", false)
         const Tooltip = getModuleByDisplayName('Tooltip', false)  
+        
 
         // injectors
         patch('tooltip-inject', Tooltip.prototype, "renderTooltip", (args, res) => {
@@ -86,6 +89,15 @@ export default class LinksFlagger extends Plugin {
             var filter = this.filterUrl(res.props.href)
             if (filter){
                 customClass += " flagged-link"
+                console.log(filter)
+                console.log(this.getToolTipFromName("Safe URL").urlClass)
+                if (filter != this.getToolTipFromName("Safe URL").urlClass){
+                    var url = res.props.href;
+                    res.props.href = null;
+                    res.props.onClick = function(){
+                        openModal(() => <LinksFlaggerModal link={url} urltype={filter}/>)
+                    }
+                }
                 res.props.children = React.createElement(label, {classType:customClass,field:res.props.children,data:filter});
             }
             
