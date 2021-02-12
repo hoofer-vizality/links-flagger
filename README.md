@@ -10,7 +10,7 @@ Become aware of those "sus" links with ease.
 
 
 # Installation
-For installation, go to **Themes -> Open a CMD / Powershell / Terminal / Gitbash** in the folder, and enter the following:
+For installation, go to **Plugins -> Open a CMD / Powershell / Terminal / Gitbash** in the folder, and enter the following:
 ```
 git clone https://github.com/hoofer-vizality/links-flagger
 ```
