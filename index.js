@@ -6,8 +6,8 @@ import { getModuleByDisplayName } from '@vizality/webpack';
 import { get } from '@vizality/http';
 import { open as openModal } from '@vizality/modal';
 
-import label from "./components/label.jsx";
-import LinksFlaggerModal from "./components/testModal.jsx";
+import Label from "./components/Label";
+import LinksFlaggerModal from "./components/LinksFlaggerModal";
 
 const tooltipTypes = [
     {
@@ -95,7 +95,7 @@ export default class LinksFlagger extends Plugin {
                         openModal(() => <LinksFlaggerModal link={url} urltype={filter}/>)
                     }
                 }
-                res.props.children = React.createElement(label, {classType:customClass,field:res.props.children,data:filter});
+                res.props.children = React.createElement(Label, {classType:customClass,field:res.props.children,data:filter});               
             }
             
             return res;
