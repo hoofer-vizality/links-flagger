@@ -18,7 +18,7 @@ theonion.com
 latlmes.com
 tomorrowtides.com
 adf.ly	
-t.co	
+/t.co	
 goo.gl	
 adbooth.net	
 adfoc.us	
