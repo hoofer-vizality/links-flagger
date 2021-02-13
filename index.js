@@ -95,7 +95,7 @@ export default class LinksFlagger extends Plugin {
                         openModal(() => <LinksFlaggerModal link={url} urltype={filter}/>)
                     }
                 }
-                res.props.children = React.createElement(Label, {classType:customClass,field:res.props.children,data:filter});               
+                res.props.children = <Label classType={customClass} field={res.props.children} data={filter} />               
             }
             
             return res;
