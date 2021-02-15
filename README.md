@@ -29,4 +29,4 @@ If you have any URLs you would like to submit, please use our link submission te
 # Credits
 JS Coding done by the wizard person, [@Hoofer](https://github.com/HooferDevelops)!
 
-CSS & Artwork done by the amazing (not a weeb), [@LuckFire](https://github.com/LuckFire) :o
+Concepts made by the amazing [@Snapperito](https://github.com/Snapperito) (o゜▽゜)o☆
